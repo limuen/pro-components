@@ -69,7 +69,6 @@ const BaseProFormUploadButton: React.ForwardRefRenderFunction<any, ProFormDragge
     max,
     icon = <UploadOutlined />,
     buttonProps,
-    onChange,
     disabled,
     proFieldProps,
     ...restProps
@@ -95,7 +94,6 @@ const BaseProFormUploadButton: React.ForwardRefRenderFunction<any, ProFormDragge
       {...fieldProps}
       name={fieldProps?.name ?? 'file'}
       onChange={(info) => {
-        onChange?.(info);
         fieldProps?.onChange?.(info);
       }}
     >
